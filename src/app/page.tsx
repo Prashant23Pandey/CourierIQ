@@ -180,6 +180,7 @@ export default function CourierIQ() {
               <span className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
                 Courier<span className="text-blue-400">IQ</span>
               </span>
+              <p className="text-[10px] text-slate-500 font-medium tracking-widest mt-0.5">BY PRASHANT23PANDEY</p>
             </div>
           </div>
 
@@ -1173,6 +1174,18 @@ export default function CourierIQ() {
         </AnimatePresence>
 
       </main>
+      
+      <footer className="max-w-7xl mx-auto px-4 md:px-8 py-10 border-t border-slate-800/50 mt-20">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="text-sm text-slate-500">
+            © 2024 CourierIQ. All rights reserved.
+          </div>
+          <div className="flex items-center gap-2 text-sm font-medium text-slate-400">
+            Crafted with <Activity className="w-3.5 h-3.5 text-blue-500" /> by 
+            <span className="text-white font-bold tracking-tight">PRASHANT23PANDEY</span>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
