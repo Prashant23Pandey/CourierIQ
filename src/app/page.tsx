@@ -252,7 +252,7 @@ export default function CourierIQ() {
                           className="mt-1.5 flex items-center gap-1.5 text-xs text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-lg px-2.5 py-1.5">
                           <CheckCircle className="w-3 h-3 shrink-0" />
                           <span className="font-medium">{pickupPin.info.area}</span>
-                          <span className="text-slate-400">Â· {pickupPin.info.district}, {pickupPin.info.state}</span>
+                          <span className="text-slate-400">· {pickupPin.info.district}, {pickupPin.info.state}</span>
                         </motion.div>
                       )}
                       {pickupPin.status === "err" && (
@@ -283,7 +283,7 @@ export default function CourierIQ() {
                           className="mt-1.5 flex items-center gap-1.5 text-xs text-purple-400 bg-purple-500/10 border border-purple-500/20 rounded-lg px-2.5 py-1.5">
                           <CheckCircle className="w-3 h-3 shrink-0" />
                           <span className="font-medium">{deliveryPin.info.area}</span>
-                          <span className="text-slate-400">Â· {deliveryPin.info.district}, {deliveryPin.info.state}</span>
+                          <span className="text-slate-400">· {deliveryPin.info.area} district, {deliveryPin.info.state}</span>
                         </motion.div>
                       )}
                       {deliveryPin.status === "err" && (
@@ -364,8 +364,8 @@ export default function CourierIQ() {
                     <div className="w-14 h-14 border-4 border-blue-500/20 border-t-blue-500 rounded-full animate-spin" />
                     <div className="absolute inset-0 flex items-center justify-center"><Zap className="w-5 h-5 text-blue-500 animate-pulse" /></div>
                   </div>
-                  <p className="text-blue-400 font-medium animate-pulse">Running AI Scoring Matrixâ€¦</p>
-                  <p className="text-slate-500 text-xs mt-1">Fetching live rates Â· Analysing delay vectors</p>
+                  <p className="text-blue-400 font-medium animate-pulse">Running AI Scoring Matrix...</p>
+                  <p className="text-slate-500 text-xs mt-1">Fetching live rates · Analysing delay vectors</p>
                 </div>
               )}
 
@@ -381,7 +381,7 @@ export default function CourierIQ() {
                     <div className="p-6 relative z-10 flex flex-col md:flex-row gap-6 justify-between">
                       <div className="flex-1">
                         <div className="inline-flex items-center gap-1.5 bg-blue-500/20 text-blue-300 px-2.5 py-1 rounded-full text-xs font-semibold mb-3 border border-blue-500/30">
-                          <CheckCircle2 className="w-3 h-3" /> AI RECOMMENDED Â· Score {best.score}
+                          <CheckCircle2 className="w-3 h-3" /> AI RECOMMENDED · Score {best.score}
                         </div>
                         <h2 className="text-2xl font-bold text-white flex items-center gap-2">{best.logo} {best.name}</h2>
                         <p className="text-sm text-slate-400 mt-2 max-w-md">Best balance of cost, speed and reliability. Delay risk only <span className={cn("font-semibold", best.delayRisk < 20 ? "text-emerald-400" : "text-amber-400")}>{best.delayRisk}%</span>.</p>
@@ -609,7 +609,7 @@ export default function CourierIQ() {
                       {[
                         { label: "Order Picked Up", done: true },
                         { label: "In Transit — Origin Hub", done: true },
-                        { label: tracked.status.includes("Delayed") ? "âš ï¸ Delayed at Mid-Hub" : "In Transit — Regional Hub", done: !tracked.status.includes("Delayed"), warn: tracked.status.includes("Delayed") },
+                        { label: tracked.status.includes("Delayed") ? "⚠️ Delayed at Mid-Hub" : "In Transit — Regional Hub", done: !tracked.status.includes("Delayed"), warn: tracked.status.includes("Delayed") },
                         { label: "Out for Delivery", done: tracked.status === "Delivered" },
                         { label: "Delivered", done: tracked.status === "Delivered" },
                       ].map((s, i) => (
@@ -784,7 +784,7 @@ export default function CourierIQ() {
                               Accept Handover
                             </button>
                           )}
-                          {isAccepted && <span className="text-xs font-semibold border border-emerald-500/30 text-emerald-400 bg-emerald-500/10 px-4 py-1.5 rounded-lg">Mapping Routeâ€¦</span>}
+                          {isAccepted && <span className="text-xs font-semibold border border-emerald-500/30 text-emerald-400 bg-emerald-500/10 px-4 py-1.5 rounded-lg">Mapping Route...</span>}
                           {isTaken && <span className="text-xs text-slate-500 border border-slate-700 px-4 py-1.5 rounded-lg">Unavailable</span>}
                         </div>
                       </div>
