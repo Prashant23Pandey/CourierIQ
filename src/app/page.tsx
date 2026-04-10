@@ -198,10 +198,6 @@ export default function CourierIQ() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <div className="hidden md:flex items-center gap-1.5 text-sm text-emerald-400 bg-emerald-400/10 px-3 py-1.5 rounded-full border border-emerald-500/20">
-              <Activity className="w-3.5 h-3.5 animate-pulse" /><span className="text-xs">Network Live</span>
-            </div>
-            <img src="https://i.pravatar.cc/100?img=33" alt="user" className="w-9 h-9 rounded-full border-2 border-slate-700" />
           </div>
         </div>
         {/* Mobile tabs */}
